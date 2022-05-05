@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/perFragment"
+        android:name="com.example.navigationdy.PerFragment"
+        android:label="fragment_per"
+        tools:layout="@layout/fragment_per" >
+        <action
+            android:id="@+id/action_perFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sdoFragment"
+        android:name="com.example.navigationdy.SdoFragment"
+        android:label="fragment_sdo"
+        tools:layout="@layout/fragment_sdo" >
+        <action
+            android:id="@+id/action_sdoFragment_to_terFragment"
+            app:destination="@id/terFragment" />
+        <action
+            android:id="@+id/action_sdoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.navigationdy.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_perFragment"
+            app:destination="@id/perFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_sdoFragment"
+            app:destination="@id/sdoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terFragment"
+        android:name="com.example.navigationdy.terFragment"
+        android:label="fragment_ter"
+        tools:layout="@layout/fragment_ter" >
+        <action
+            android:id="@+id/action_terFragment_to_sdoFragment"
+            app:destination="@id/sdoFragment" />
+        <action
+            android:id="@+id/action_terFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+</navigation>
